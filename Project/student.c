@@ -5,17 +5,14 @@
 #include <stdio.h>
 extern struct Student* studentHead;
 
-// Define the Student structure
 struct Student {
     int id;
     char name[50];
     struct Student* next;
 };
 
-// Global head pointer for the student list
 struct Student* studentHead = NULL;
 
-// Function to add a new student
 void addStudent() {
     struct Student* newStudent = (struct Student*)malloc(sizeof(struct Student));
 
@@ -39,7 +36,6 @@ void addStudent() {
     printf("Student added successfully!\n");
 }
 
-// Function to display all students
 void displayStudents() {
     if (studentHead == NULL) {
         printf("No students found.\n");
