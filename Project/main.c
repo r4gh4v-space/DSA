@@ -1,16 +1,13 @@
-#include <stdio.h>  // For printf, scanf
-#include <stdlib.h> // For exit
+#include <stdio.h>  
+#include <stdlib.h> 
 
-// Declarations for functions in student.c
 void addStudent();
 void displayStudents();
 
-// Declarations for functions in attendance.c
 void markAttendance();
 void viewAttendanceByDate();
 void deleteAttendance();
 
-// Declarations for functions in report.c
 void searchStudentAttendance();
 void subjectWiseAttendance();
 void overallAttendanceReport();
@@ -30,39 +27,39 @@ void menu() {
         printf("0. Exit\n");
 
         printf("Enter your choice: ");
-        fflush(stdout); // Ensure that the prompt is printed before waiting for input
+        fflush(stdout); 
         scanf("%d", &choice);
 
-        printf("Choice: %d\n", choice);  // Print the user input
+        printf("Choice: %d\n", choice);  
 
         switch(choice) {
             case 1:
-                addStudent();  // Call addStudent()
+                addStudent();  
                 break;
             case 2:
-                displayStudents();  // Call displayStudents()
+                displayStudents();  
                 break;
             case 3:
-                markAttendance();  // Call markAttendance()
+                markAttendance();  
                 break;
             case 4:
-                viewAttendanceByDate();  // Call viewAttendanceByDate()
+                viewAttendanceByDate();  
                 break;
             case 5:
-                deleteAttendance();  // Call deleteAttendance()
+                deleteAttendance();  
                 break;
             case 6:
-                searchStudentAttendance();  // Call searchStudentAttendance()
+                searchStudentAttendance(); 
                 break;
             case 7:
-                subjectWiseAttendance();  // Call subjectWiseAttendance()
+                subjectWiseAttendance(); 
                 break;
             case 8:
-                overallAttendanceReport();  // Call overallAttendanceReport()
+                overallAttendanceReport();  
                 break;
             case 0:
                 printf("Exiting...\n");
-                exit(0);  // Exit the program
+                exit(0); 
             default:
                 printf("Invalid choice. Try again.\n");
         }
