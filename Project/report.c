@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 extern struct Student* studentHead;
-// Struct Definitions (COPY THESE in every .c file that needs them)
+
 struct Attendance {
     char subject[30];
     char date[15];
@@ -17,15 +17,12 @@ struct Student {
     struct Attendance* attendanceHead;
 };
 
-// Extern student head
 extern struct Student* studentHead;
 #include <stdio.h>
 #include <string.h>
 
-// Forward declaration of global student list
 extern struct Student* studentHead;
 
-// 1. 🔍 Search Student Attendance
 void searchStudentAttendance() {
     int id;
     printf("Enter Student ID to Search: ");
@@ -51,7 +48,6 @@ void searchStudentAttendance() {
     printf("Student not found.\n");
 }
 
-// 2. 📘 Per Subject Attendance for a Student
 void subjectWiseAttendance() {
     int id;
     char subject[30];
@@ -86,7 +82,6 @@ void subjectWiseAttendance() {
     printf("Student not found.\n");
 }
 
-// 3. 📈 Overall Attendance for All Students
 void overallAttendanceReport() {
     struct Student* student = studentHead;
     printf("\n--- Overall Attendance Report ---\n");
